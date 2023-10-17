@@ -8,12 +8,15 @@ public class Person {
     private final Address address;
     private final Company job;
 
-    public Person(String name, boolean employed, int age, float salary, Address address, Company job) {
+    private Object[] hobbies;
+
+    public Person(String name, boolean employed, int age, float salary, Address address, Company job, Object[] hobbies) {
         this.name = name;
         this.employed = employed;
         this.age = age;
         this.salary = salary;
         this.address = address;
         this.job = job;
+        this.hobbies = hobbies;
     }
 }
