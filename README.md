@@ -39,3 +39,21 @@
 - field.setAccessible(true)
   - Allows us to access private fields.
   - if classes belong to different modules, that don't allow access to those class, we can use `--add-opens` to allow access to private fields.
+
+## Methods
+- Methods are functions that belong to a class or object.
+- getMethod() searches in order backwards through the class hierarchy. 
+- getDeclaredMethods()
+  - Returns all the methods declared by the class. (public, protected, default (package) access, and private methods)
+  - Includes inherited methods.
+- getMethods()
+  - Returns only the public methods declared by the class.
+  - Includes inherited methods.
+- getDeclaredMethod(<method_name>, <parameter_types>)
+  - Returns a specific method declared by the class.
+  - Looks only at the methods in current class.
+  - Throws NoSuchMethodException if the method does not exist.
+- getMethod(<method_name>, <parameter_types>)
+  - Returns a specific public method declared by the class.
+  - Includes inherited methods.
+  - Throws NoSuchMethodException if the method does not exist.
