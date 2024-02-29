@@ -13,7 +13,11 @@ public class GeneralMethod {
         System.out.println("Return type is " + method.getReturnType().getSimpleName());
         System.out.println("Parameter count is " + method.getParameterCount());
 
-        System.out.println("Exception types are: " + Arrays.stream(method.getExceptionTypes()).map(Class::getSimpleName).collect(Collectors.joining(", ")));
+        System.out.println("Exception types are: " +
+                Arrays.stream(method.getExceptionTypes())
+                        .map(Class::getSimpleName)
+                        .collect(Collectors.joining(", "))
+        );
     }
 
     public static String[] getArray(String param1, String param2) throws RuntimeException, NoSuchMethodException {
